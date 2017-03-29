@@ -1,0 +1,17 @@
+﻿@model List<News>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>新闻列表</h2>
+
+<a href="/News/BuildStaticFiles">点击我生成静态页</a>
+
+<ul>
+    @foreach (var item in Model)
+    {
+        <li><a href="@($"/statics/news/{item.Id}.html")">@item.Title</a></li>
+    }
+</ul>
+
